@@ -47,12 +47,12 @@ public class Player : MonoBehaviour {
             this.transform.position = new Vector3((Mathf.Clamp((this.transform.position.x + speed * Time.deltaTime), (xmin + this.transform.localScale.x / 2), (xmax - this.transform.localScale.x / 2))), this.transform.position.y, this.transform.position.z);
         }
 
-        if(Input.GetKey(KeyCode.DownArrow))
+        if(Input.GetKey(KeyCode.DownArrow) && Application.loadedLevelName!="Level05")
         {
             this.transform.position = new Vector3(this.transform.position.x, (Mathf.Clamp((this.transform.position.y - speed * Time.deltaTime), (ymin + this.transform.localScale.y / 2), (ymax - this.transform.localScale.y / 2))), this.transform.position.z);
         }
 
-        if(Input.GetKey(KeyCode.UpArrow))
+		if(Input.GetKey(KeyCode.UpArrow) && Application.loadedLevelName!="Level05")
         {
             this.transform.position = new Vector3(this.transform.position.x, (Mathf.Clamp((this.transform.position.y + speed * Time.deltaTime), (ymin + this.transform.localScale.y / 2), (ymax - this.transform.localScale.y / 2))), this.transform.position.z);
         }
